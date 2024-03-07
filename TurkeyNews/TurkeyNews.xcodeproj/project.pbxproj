@@ -19,12 +19,26 @@
 		C40C40442B99A14400F82874 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40432B99A14400F82874 /* ResponseError.swift */; };
 		C40C40462B99A2CE00F82874 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40452B99A2CE00F82874 /* ResponseParser.swift */; };
 		C40C40482B99A4DB00F82874 /* WNetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40472B99A4DB00F82874 /* WNetworkLogger.swift */; };
+		C4A836442B99E66500F5D6CB /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A836432B99E66500F5D6CB /* News.swift */; };
+		C4A836472B99E71A00F5D6CB /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A836462B99E71A00F5D6CB /* NewsService.swift */; };
+		C4A8364F2B99E91700F5D6CB /* NewsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A8364E2B99E91700F5D6CB /* NewsServiceTests.swift */; };
+		C4A836562B99E99300F5D6CB /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A836552B99E99300F5D6CB /* MockURLProtocol.swift */; };
 		C4BF68052B98A15B00B5515B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68042B98A15B00B5515B /* AppDelegate.swift */; };
 		C4BF68072B98A15B00B5515B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68062B98A15B00B5515B /* SceneDelegate.swift */; };
 		C4BF68092B98A15B00B5515B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68082B98A15B00B5515B /* MainViewController.swift */; };
 		C4BF680E2B98A15E00B5515B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BF680D2B98A15E00B5515B /* Assets.xcassets */; };
 		C4BF68112B98A15E00B5515B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BF680F2B98A15E00B5515B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4A836502B99E91700F5D6CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BF67F92B98A15B00B5515B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4BF68002B98A15B00B5515B;
+			remoteInfo = TurkeyNews;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C40C402B2B998D3B00F82874 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -39,6 +53,11 @@
 		C40C40432B99A14400F82874 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		C40C40452B99A2CE00F82874 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		C40C40472B99A4DB00F82874 /* WNetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNetworkLogger.swift; sourceTree = "<group>"; };
+		C4A836432B99E66500F5D6CB /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		C4A836462B99E71A00F5D6CB /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		C4A8364C2B99E91700F5D6CB /* TurkeyNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurkeyNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4A8364E2B99E91700F5D6CB /* NewsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceTests.swift; sourceTree = "<group>"; };
+		C4A836552B99E99300F5D6CB /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		C4BF68012B98A15B00B5515B /* TurkeyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkeyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BF68042B98A15B00B5515B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BF68062B98A15B00B5515B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C4A836492B99E91700F5D6CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4BF67FE2B98A15B00B5515B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,10 +150,36 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
+		C4A836422B99E65E00F5D6CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4A836432B99E66500F5D6CB /* News.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4A836452B99E71200F5D6CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4A836462B99E71A00F5D6CB /* NewsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C4A8364D2B99E91700F5D6CB /* TurkeyNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4A8364E2B99E91700F5D6CB /* NewsServiceTests.swift */,
+				C4A836552B99E99300F5D6CB /* MockURLProtocol.swift */,
+			);
+			path = TurkeyNewsTests;
+			sourceTree = "<group>";
+		};
 		C4BF67F82B98A15B00B5515B = {
 			isa = PBXGroup;
 			children = (
 				C4BF68032B98A15B00B5515B /* TurkeyNews */,
+				C4A8364D2B99E91700F5D6CB /* TurkeyNewsTests */,
 				C4BF68022B98A15B00B5515B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C4BF68012B98A15B00B5515B /* TurkeyNews.app */,
+				C4A8364C2B99E91700F5D6CB /* TurkeyNewsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +196,8 @@
 		C4BF68032B98A15B00B5515B /* TurkeyNews */ = {
 			isa = PBXGroup;
 			children = (
+				C4A836452B99E71200F5D6CB /* Services */,
+				C4A836422B99E65E00F5D6CB /* Model */,
 				C40C40342B9995A500F82874 /* Common */,
 				C40C402A2B998D2E00F82874 /* Networking */,
 				C4BF681A2B98A18A00B5515B /* Controllers */,
@@ -191,6 +246,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C4A8364B2B99E91700F5D6CB /* TurkeyNewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4A836522B99E91700F5D6CB /* Build configuration list for PBXNativeTarget "TurkeyNewsTests" */;
+			buildPhases = (
+				C4A836482B99E91700F5D6CB /* Sources */,
+				C4A836492B99E91700F5D6CB /* Frameworks */,
+				C4A8364A2B99E91700F5D6CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4A836512B99E91700F5D6CB /* PBXTargetDependency */,
+			);
+			name = TurkeyNewsTests;
+			productName = TurkeyNewsTests;
+			productReference = C4A8364C2B99E91700F5D6CB /* TurkeyNewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C4BF68002B98A15B00B5515B /* TurkeyNews */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4BF68152B98A15E00B5515B /* Build configuration list for PBXNativeTarget "TurkeyNews" */;
@@ -218,6 +291,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					C4A8364B2B99E91700F5D6CB = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = C4BF68002B98A15B00B5515B;
+					};
 					C4BF68002B98A15B00B5515B = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -237,11 +314,19 @@
 			projectRoot = "";
 			targets = (
 				C4BF68002B98A15B00B5515B /* TurkeyNews */,
+				C4A8364B2B99E91700F5D6CB /* TurkeyNewsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C4A8364A2B99E91700F5D6CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4BF67FF2B98A15B00B5515B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +340,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C4A836482B99E91700F5D6CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A8364F2B99E91700F5D6CB /* NewsServiceTests.swift in Sources */,
+				C4A836562B99E99300F5D6CB /* MockURLProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4BF67FD2B98A15B00B5515B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,12 +356,14 @@
 				C4BF68092B98A15B00B5515B /* MainViewController.swift in Sources */,
 				C4BF68052B98A15B00B5515B /* AppDelegate.swift in Sources */,
 				C4BF68072B98A15B00B5515B /* SceneDelegate.swift in Sources */,
+				C4A836442B99E66500F5D6CB /* News.swift in Sources */,
 				C40C40442B99A14400F82874 /* ResponseError.swift in Sources */,
 				C40C40482B99A4DB00F82874 /* WNetworkLogger.swift in Sources */,
 				C40C403F2B999F1000F82874 /* APIError.swift in Sources */,
 				C40C40372B9995B400F82874 /* KeychainWrapper.swift in Sources */,
 				C40C40392B999DB900F82874 /* ReachabilityHelper.swift in Sources */,
 				C40C402C2B998D3B00F82874 /* APIClient.swift in Sources */,
+				C4A836472B99E71A00F5D6CB /* NewsService.swift in Sources */,
 				C40C40422B999F9E00F82874 /* URLSessionProvider.swift in Sources */,
 				C40C403D2B999F0800F82874 /* NetworkError.swift in Sources */,
 				C40C40312B998F0200F82874 /* APIRequestBuilder.swift in Sources */,
@@ -277,6 +373,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4A836512B99E91700F5D6CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4BF68002B98A15B00B5515B /* TurkeyNews */;
+			targetProxy = C4A836502B99E91700F5D6CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C4BF680F2B98A15E00B5515B /* LaunchScreen.storyboard */ = {
@@ -290,6 +394,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C4A836532B99E91700F5D6CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5XZHHC4623;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hakkicansengonul.TurkeyNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurkeyNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TurkeyNews";
+			};
+			name = Debug;
+		};
+		C4A836542B99E91700F5D6CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5XZHHC4623;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hakkicansengonul.TurkeyNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TurkeyNews.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TurkeyNews";
+			};
+			name = Release;
+		};
 		C4BF68132B98A15E00B5515B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -472,6 +612,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C4A836522B99E91700F5D6CB /* Build configuration list for PBXNativeTarget "TurkeyNewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4A836532B99E91700F5D6CB /* Debug */,
+				C4A836542B99E91700F5D6CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4BF67FC2B98A15B00B5515B /* Build configuration list for PBXProject "TurkeyNews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
