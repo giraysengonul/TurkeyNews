@@ -10,6 +10,8 @@
 		C40C402C2B998D3B00F82874 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C402B2B998D3B00F82874 /* APIClient.swift */; };
 		C40C402E2B998D4D00F82874 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C402D2B998D4D00F82874 /* Endpoint.swift */; };
 		C40C40312B998F0200F82874 /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40302B998F0200F82874 /* APIRequestBuilder.swift */; };
+		C40C40332B99956400F82874 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C40C40322B99956400F82874 /* Config.plist */; };
+		C40C40372B9995B400F82874 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40362B9995B400F82874 /* KeychainWrapper.swift */; };
 		C4BF68052B98A15B00B5515B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68042B98A15B00B5515B /* AppDelegate.swift */; };
 		C4BF68072B98A15B00B5515B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68062B98A15B00B5515B /* SceneDelegate.swift */; };
 		C4BF68092B98A15B00B5515B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68082B98A15B00B5515B /* MainViewController.swift */; };
@@ -21,6 +23,8 @@
 		C40C402B2B998D3B00F82874 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C40C402D2B998D4D00F82874 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C40C40302B998F0200F82874 /* APIRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
+		C40C40322B99956400F82874 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		C40C40362B9995B400F82874 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		C4BF68012B98A15B00B5515B /* TurkeyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkeyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BF68042B98A15B00B5515B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BF68062B98A15B00B5515B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		C40C402A2B998D2E00F82874 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C40C40342B9995A500F82874 /* Common */,
 				C40C402F2B998EF600F82874 /* RequestBuilder */,
 				C40C402B2B998D3B00F82874 /* APIClient.swift */,
 				C40C402D2B998D4D00F82874 /* Endpoint.swift */,
@@ -57,6 +62,22 @@
 				C40C40302B998F0200F82874 /* APIRequestBuilder.swift */,
 			);
 			path = RequestBuilder;
+			sourceTree = "<group>";
+		};
+		C40C40342B9995A500F82874 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C40C40352B9995AB00F82874 /* Helpers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C40C40352B9995AB00F82874 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C40C40362B9995B400F82874 /* KeychainWrapper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C4BF67F82B98A15B00B5515B = {
@@ -83,6 +104,7 @@
 				C4BF68192B98A18100B5515B /* Resources */,
 				C4BF68182B98A17700B5515B /* SupportingFiles */,
 				C4BF68122B98A15E00B5515B /* Info.plist */,
+				C40C40322B99956400F82874 /* Config.plist */,
 			);
 			path = TurkeyNews;
 			sourceTree = "<group>";
@@ -180,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BF68112B98A15E00B5515B /* LaunchScreen.storyboard in Resources */,
+				C40C40332B99956400F82874 /* Config.plist in Resources */,
 				C4BF680E2B98A15E00B5515B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +217,7 @@
 				C4BF68092B98A15B00B5515B /* MainViewController.swift in Sources */,
 				C4BF68052B98A15B00B5515B /* AppDelegate.swift in Sources */,
 				C4BF68072B98A15B00B5515B /* SceneDelegate.swift in Sources */,
+				C40C40372B9995B400F82874 /* KeychainWrapper.swift in Sources */,
 				C40C402C2B998D3B00F82874 /* APIClient.swift in Sources */,
 				C40C40312B998F0200F82874 /* APIRequestBuilder.swift in Sources */,
 				C40C402E2B998D4D00F82874 /* Endpoint.swift in Sources */,

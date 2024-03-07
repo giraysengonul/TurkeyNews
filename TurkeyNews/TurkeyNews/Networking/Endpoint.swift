@@ -59,12 +59,24 @@ enum Endpoint{
     /// Headers for URL
     var headers: [String:String]{
         get{
+            //APIKEY Controll
+            guard let apikey = getAPIKey() else { return [:] }
             return [
                 "content-type":"application/json",
-                "authorization":"apikey 1zp4wLipWiy1GeG0wf4ueT:1sHDkZfQbmdsWyi434bKUk"
+                "authorization": apikey
             ]
         }
     }
+    
+    /// GET API KEY
+       /// - Returns: apikey or nil
+       private func getAPIKey() -> String? {
+           guard let apiKeyData = KeychainWrapper.shared.load(key: "APIKEY") else {
+               return nil
+           }
+           return String(data: apiKeyData, encoding: .utf8)
+       }
+    
     
     /// URLRequest Process
     /// - Returns: URLRequest or Nil
