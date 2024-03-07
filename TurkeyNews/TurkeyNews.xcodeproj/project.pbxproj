@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40C402C2B998D3B00F82874 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C402B2B998D3B00F82874 /* APIClient.swift */; };
+		C40C402E2B998D4D00F82874 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C402D2B998D4D00F82874 /* Endpoint.swift */; };
+		C40C40312B998F0200F82874 /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40302B998F0200F82874 /* APIRequestBuilder.swift */; };
 		C4BF68052B98A15B00B5515B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68042B98A15B00B5515B /* AppDelegate.swift */; };
 		C4BF68072B98A15B00B5515B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68062B98A15B00B5515B /* SceneDelegate.swift */; };
 		C4BF68092B98A15B00B5515B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68082B98A15B00B5515B /* MainViewController.swift */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40C402B2B998D3B00F82874 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C40C402D2B998D4D00F82874 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C40C40302B998F0200F82874 /* APIRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
 		C4BF68012B98A15B00B5515B /* TurkeyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkeyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BF68042B98A15B00B5515B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BF68062B98A15B00B5515B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +41,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40C402A2B998D2E00F82874 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C40C402F2B998EF600F82874 /* RequestBuilder */,
+				C40C402B2B998D3B00F82874 /* APIClient.swift */,
+				C40C402D2B998D4D00F82874 /* Endpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C40C402F2B998EF600F82874 /* RequestBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				C40C40302B998F0200F82874 /* APIRequestBuilder.swift */,
+			);
+			path = RequestBuilder;
+			sourceTree = "<group>";
+		};
 		C4BF67F82B98A15B00B5515B = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +78,7 @@
 		C4BF68032B98A15B00B5515B /* TurkeyNews */ = {
 			isa = PBXGroup;
 			children = (
+				C40C402A2B998D2E00F82874 /* Networking */,
 				C4BF681A2B98A18A00B5515B /* Controllers */,
 				C4BF68192B98A18100B5515B /* Resources */,
 				C4BF68182B98A17700B5515B /* SupportingFiles */,
@@ -169,6 +194,9 @@
 				C4BF68092B98A15B00B5515B /* MainViewController.swift in Sources */,
 				C4BF68052B98A15B00B5515B /* AppDelegate.swift in Sources */,
 				C4BF68072B98A15B00B5515B /* SceneDelegate.swift in Sources */,
+				C40C402C2B998D3B00F82874 /* APIClient.swift in Sources */,
+				C40C40312B998F0200F82874 /* APIRequestBuilder.swift in Sources */,
+				C40C402E2B998D4D00F82874 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
