@@ -22,7 +22,11 @@ final class APIRequestBuilder{
         guard let componenURL = URLComponents(url: url.appendingPathComponent(path).appending(queryItems: queryItems), resolvingAgainstBaseURL: true) else{
             return nil
         }
-        var request = URLRequest(url: componenURL.url!)
+        guard let url = componenURL.url else {
+            print("url error")
+            return nil
+        }
+        var request = URLRequest(url: url)
         request.httpMethod = methot
         request.allHTTPHeaderFields = headers
         return request

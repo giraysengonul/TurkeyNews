@@ -14,8 +14,7 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = .systemGreen
         let endPoint = Endpoint.fetchGetNewsData(queryItems: [.init(name: "country", value: "tr"), .init(name: "tag", value: "general")])
+        
     }
-
-
 }
 

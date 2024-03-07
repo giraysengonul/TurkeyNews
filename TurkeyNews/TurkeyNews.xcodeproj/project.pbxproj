@@ -12,6 +12,13 @@
 		C40C40312B998F0200F82874 /* APIRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40302B998F0200F82874 /* APIRequestBuilder.swift */; };
 		C40C40332B99956400F82874 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = C40C40322B99956400F82874 /* Config.plist */; };
 		C40C40372B9995B400F82874 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40362B9995B400F82874 /* KeychainWrapper.swift */; };
+		C40C40392B999DB900F82874 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40382B999DB900F82874 /* ReachabilityHelper.swift */; };
+		C40C403D2B999F0800F82874 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C403C2B999F0800F82874 /* NetworkError.swift */; };
+		C40C403F2B999F1000F82874 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C403E2B999F1000F82874 /* APIError.swift */; };
+		C40C40422B999F9E00F82874 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40412B999F9E00F82874 /* URLSessionProvider.swift */; };
+		C40C40442B99A14400F82874 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40432B99A14400F82874 /* ResponseError.swift */; };
+		C40C40462B99A2CE00F82874 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40452B99A2CE00F82874 /* ResponseParser.swift */; };
+		C40C40482B99A4DB00F82874 /* WNetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C40472B99A4DB00F82874 /* WNetworkLogger.swift */; };
 		C4BF68052B98A15B00B5515B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68042B98A15B00B5515B /* AppDelegate.swift */; };
 		C4BF68072B98A15B00B5515B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68062B98A15B00B5515B /* SceneDelegate.swift */; };
 		C4BF68092B98A15B00B5515B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF68082B98A15B00B5515B /* MainViewController.swift */; };
@@ -25,6 +32,13 @@
 		C40C40302B998F0200F82874 /* APIRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
 		C40C40322B99956400F82874 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		C40C40362B9995B400F82874 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		C40C40382B999DB900F82874 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
+		C40C403C2B999F0800F82874 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C40C403E2B999F1000F82874 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		C40C40412B999F9E00F82874 /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
+		C40C40432B99A14400F82874 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		C40C40452B99A2CE00F82874 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		C40C40472B99A4DB00F82874 /* WNetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNetworkLogger.swift; sourceTree = "<group>"; };
 		C4BF68012B98A15B00B5515B /* TurkeyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurkeyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BF68042B98A15B00B5515B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BF68062B98A15B00B5515B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,10 +62,13 @@
 		C40C402A2B998D2E00F82874 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C40C40342B9995A500F82874 /* Common */,
+				C40C40402B999F8F00F82874 /* NetworkLayer */,
+				C40C403B2B999EF700F82874 /* Model */,
+				C40C403A2B999EB600F82874 /* ResponseHandler */,
 				C40C402F2B998EF600F82874 /* RequestBuilder */,
 				C40C402B2B998D3B00F82874 /* APIClient.swift */,
 				C40C402D2B998D4D00F82874 /* Endpoint.swift */,
+				C40C40472B99A4DB00F82874 /* WNetworkLogger.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -76,8 +93,35 @@
 			isa = PBXGroup;
 			children = (
 				C40C40362B9995B400F82874 /* KeychainWrapper.swift */,
+				C40C40382B999DB900F82874 /* ReachabilityHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C40C403A2B999EB600F82874 /* ResponseHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C40C40432B99A14400F82874 /* ResponseError.swift */,
+				C40C40452B99A2CE00F82874 /* ResponseParser.swift */,
+			);
+			path = ResponseHandler;
+			sourceTree = "<group>";
+		};
+		C40C403B2B999EF700F82874 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C40C403C2B999F0800F82874 /* NetworkError.swift */,
+				C40C403E2B999F1000F82874 /* APIError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C40C40402B999F8F00F82874 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C40C40412B999F9E00F82874 /* URLSessionProvider.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		C4BF67F82B98A15B00B5515B = {
@@ -99,6 +143,7 @@
 		C4BF68032B98A15B00B5515B /* TurkeyNews */ = {
 			isa = PBXGroup;
 			children = (
+				C40C40342B9995A500F82874 /* Common */,
 				C40C402A2B998D2E00F82874 /* Networking */,
 				C4BF681A2B98A18A00B5515B /* Controllers */,
 				C4BF68192B98A18100B5515B /* Resources */,
@@ -217,10 +262,17 @@
 				C4BF68092B98A15B00B5515B /* MainViewController.swift in Sources */,
 				C4BF68052B98A15B00B5515B /* AppDelegate.swift in Sources */,
 				C4BF68072B98A15B00B5515B /* SceneDelegate.swift in Sources */,
+				C40C40442B99A14400F82874 /* ResponseError.swift in Sources */,
+				C40C40482B99A4DB00F82874 /* WNetworkLogger.swift in Sources */,
+				C40C403F2B999F1000F82874 /* APIError.swift in Sources */,
 				C40C40372B9995B400F82874 /* KeychainWrapper.swift in Sources */,
+				C40C40392B999DB900F82874 /* ReachabilityHelper.swift in Sources */,
 				C40C402C2B998D3B00F82874 /* APIClient.swift in Sources */,
+				C40C40422B999F9E00F82874 /* URLSessionProvider.swift in Sources */,
+				C40C403D2B999F0800F82874 /* NetworkError.swift in Sources */,
 				C40C40312B998F0200F82874 /* APIRequestBuilder.swift in Sources */,
 				C40C402E2B998D4D00F82874 /* Endpoint.swift in Sources */,
+				C40C40462B99A2CE00F82874 /* ResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
